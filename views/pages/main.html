@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Happiness Factor</title>
+<script src="jquery-1.12.3.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+
+    // Your code here.
+ 	$('#buttonhappy').mousedown(function() {
+		$('#buttonhappy').css('opacity','0.6');
+	});
+	$('#buttonhappy').mouseup(function () {
+		$('#buttonhappy').css('opacity','1');
+	});
+
+	$('#button-undecided').mousedown(function() {
+		$('#button-undecided').css('opacity','0.6');
+	});
+	$('#button-undecided').mouseup(function () {
+		$('#button-undecided').css('opacity','1');
+	});
+	$('#button-unhappy').mousedown(function() {
+		$('#button-unhappy').css('opacity','0.6');
+	});
+	$('#button-unhappy').mouseup(function () {
+		$('#button-unhappy').css('opacity','1');
+	});
+});
+
+</script>
+</head>
+<body>
+<div style="margin: 0 auto; width: 100%;">
+	<h1>Happiness Factor Voting</h1>
+	<marquee behavior="alternate"><img src="unicorn.png" width="200"></marquee>
+	<div style="float: left;">
+		<a id="buttonhappy" style="background: url('happy.png'); z-index: 1; width:393px; height: 393px;"></a>
+  </div>
+	<div style="float: left;">
+		<a id="button-undecided" style="background: url('undecided.png'); width:393px; height: 393px;"></a>
+  </div>
+	<div>
+    <a  id="button-unhappy" style="background: url('unhappy.png'); width:393px; height: 393px;"></a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -2,22 +2,47 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
+  <script type="text/javascript">
+  $( document ).ready(function() {
+
+      // Your code here.
+   	$('#buttonhappy').mousedown(function() {
+  		$('#buttonhappy').css('opacity','0.6');
+  	});
+  	$('#buttonhappy').mouseup(function () {
+  		$('#buttonhappy').css('opacity','1');
+  	});
+
+  	$('#button-undecided').mousedown(function() {
+  		$('#button-undecided').css('opacity','0.6');
+  	});
+  	$('#button-undecided').mouseup(function () {
+  		$('#button-undecided').css('opacity','1');
+  	});
+  	$('#button-unhappy').mousedown(function() {
+  		$('#button-unhappy').css('opacity','0.6');
+  	});
+  	$('#button-unhappy').mouseup(function () {
+  		$('#button-unhappy').css('opacity','1');
+  	});
+  });
+
+  </script>
 </head>
 
 <body>
-
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png">
+  <div style="margin: 0 auto; width: 100%;">
+  	<h1>Happiness Factor Voting</h1>
+  	<marquee behavior="alternate"><img src="unicorn.png" width="200"></marquee>
+    <a href="/submit?happiness=8" style="float: left;">
+  		<button id="buttonhappy" style="background: url('happy.png'); z-index: 1; width:393px; height: 393px;"></button>
     </a>
-    <h1>Getting Started with Node on Heroku</h1>
-    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+  	<a href="/submit?happiness=4" style="float: left;">
+  		<button id="button-undecided" style="background: url('undecided.png'); width:393px; height: 393px;"></button>
+    </a>
+  	<a href="/submit?happiness=0" style="float: left;">
+      <button  id="button-unhappy" style="background: url('unhappy.png'); width:393px; height: 393px;"></button>
+    </a>
   </div>
-</div>
-
-
 </body>
 </html>
